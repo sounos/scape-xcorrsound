@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 2.6) 
-project (scape-xcorrsound)
+project (simwav)
 
 
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake-modules/")
@@ -44,14 +44,14 @@ include_directories(${FFTW_INCLUDES} ${Boost_INCLUDE_DIR} libs/core libs/sound_i
 #    set (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,-rpath,${LIBSWSCALE_RPATH}")
 #endif (LINUX)
 
-set(CPACK_PACKAGE_NAME scape-xcorrsound)
+set(CPACK_PACKAGE_NAME simwav)
 set(CPACK_PACKAGE_VERSION 2.0.0)
 
 set(CPACK_DEBIAN_PACKAGE_ARCHITECTURE amd64)
 set(CPACK_DEBIAN_PACKAGE_DEPENDS "libc6, libboost-all-dev, libfftw3-dev")
 set(CPACK_DEBIAN_PACKAGE_MAINTAINER "Jesper Sindahl Nielsen <jsn@statsbiblioteket.dk>")
 set(CPACK_PACKAGE_DESCRIPTION_SUMMARY 
-"This is a package of the toolsuite scape-xcorrsound. It contains three tools
+"This is a package of the toolsuite simwav. It contains three tools
 waveform-compare: Compare two wave files to determine if they represent the same waveforms
 sound-match: find the location of a small wavefile inside a big wavefile
 overlap-analysis: find the overlap between two wave files")

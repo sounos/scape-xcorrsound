@@ -10,6 +10,7 @@
 #include "AudioStream.h"
 #include <iomanip>
 #include <utility>
+#include "wavcore.h"
 
 static const double THRESHHOLD = 0.2;
 

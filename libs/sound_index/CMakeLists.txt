@@ -11,6 +11,6 @@ add_library (sound_index
   hamming.h
 )
 
-#target_link_libraries(sound_index ${FFTW_LIBRARIES} core ${LIBAVFORMAT_LIBRARIES} ${LIBAVCODEC_LIBRARIES} ${LIBAVUTIL_LIBRARIES} chromaprint)
-target_link_libraries(sound_index ${FFTW_LIBRARIES} core)
+#target_link_libraries(sound_index ${FFTW_LIBRARIES} wavcore ${LIBAVFORMAT_LIBRARIES} ${LIBAVCODEC_LIBRARIES} ${LIBAVUTIL_LIBRARIES} chromaprint)
+target_link_libraries(sound_index ${FFTW_LIBRARIES} wavcore)
 #set_target_properties(sound_index PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../..)

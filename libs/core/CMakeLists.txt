@@ -1,4 +1,7 @@
-add_library (core
+add_library (wavcore 
+  SHARED
+  wavcore.h
+  wavcore.cpp
   AudioFile.cpp
   AudioFile.h
   AudioStream.h
@@ -11,5 +14,12 @@ add_library (core
   wavStdinReader.hh
 )
 
-target_link_libraries(core ${FFTW_LIBRARIES})
+set(CMAKE_CXX_FLAGS "-fno-rtti -fno-exceptions")
+set(CMAKE_CPP_FLAGS "-fno-rtti -fno-exceptions")
+
+target_link_libraries(wavcore ${FFTW_LIBRARIES})
 #set_target_properties(core PROPERTIES LIBRARY_OUTPUT_DIRECTORY ../..)
+
+install(TARGETS wavcore DESTINATION lib)
+
+install(FILES wavcore.h DESTINATION include)
